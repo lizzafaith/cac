@@ -1,7 +1,7 @@
 # require 'bundler/capistrano'
 
 set :application, "CAC"
-set :repository,  "git@github.com:piousbox/ruby.git"
+set :repository,  "git@github.com:piousbox/CAC.git"
 
 set :scm, :git
 set :scm_passphrase, '@!#99-H2TGn'
@@ -18,10 +18,17 @@ ssh_options[:forward_agent] = true
 ssh_options[:keys] = %w(/Users/victor.pudeyev/.ec2/ec2-keypair)
 #ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "id_aws2_rsa")] 
 
-set :deploy_to, "/home/ubuntu/ruby.git"
+set :deploy_to, "/home/ubuntu/projects/CAC.git"
 
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
+  
+  after "deploy:setup", "deploy:bundle"
+  
+  task :bundle do
+    run "cd #{current_path} && bundle install"
+  end
+  
   task :set_permissions do
     run "sudo chown ubuntu #{deploy_to} -R"
   end
