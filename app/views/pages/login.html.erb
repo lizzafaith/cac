@@ -1,0 +1,26 @@
+
+<div class="padding" id="login">
+  <h3>Login</h3>
+
+  <p />Registration for new users is closed.
+
+  <%= form_tag 'user' do %>
+    <label>Username</label>
+    <%= text_field_tag 'username' %>
+
+    <label>Password</label>
+    <%= password_field_tag 'passwd'  %>
+
+    <div class="clear"></div>
+    
+    <%= submit_tag 'Login' %>
+    <%= link_to 'Forgot Password', '/user/forgot_password', :id => 'forgot-password' %>
+    
+    <div class="clear"></div>
+  <% end %>
+
+  
+  
+
+
+</div>
