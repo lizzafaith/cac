@@ -1,12 +1,91 @@
+
 !!!
 %html
   %head
-    %title Cac2
-    = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
+    %title Computational Arts Corporation
+    = stylesheet_link_tag "reset-min", 'application'
     = csrf_meta_tags
-  %body
-    .container
-      = yield
 
+  %body{ :id => @action_name }
+    
+    #header
+      .container
+        %h1 Computatinal Arts Corp.
+        = link_to image_tag('logo.png'), root_path
+        %ul#main-menu
+          %li.about.first
+            = link_to t('g.about'), about_path
+          %li.team
+            = link_to t('g.team'), team_path
+          %li.portfolio
+            = link_to t('g.portfolio'), portfolio_path
+          %li.services
+            = link_to t('g.services'), services_path
+          %li.contact.last
+            = link_to t('g.contact'), contact_path
+
+    = yield
+    
+    .clear
+    #footer
+      #stay-connected
+        .container
+          %p Stay connected
+          %ul
+            %li.facebook
+              %a{:href => '#'} Facebook
+            %li.linkedin
+              %a{:href => '#'} Linkedin
+            %li.subscribe
+              %a{:href => '#'} Subscribe
+      #posts
+        .container
+          #popular-posts
+            %h2
+              %span Most Popular Blog Post:
+            %ul.posts
+              %li
+                %img{:alt => "image", :src => "http://www.placehold.it/45x45"}
+                .post-info
+                  %span.title Being a Programmer
+                  %span.discription Lorem ipsum dolor sit...
+                  %em.post-summary
+                    %span> August 31st 2012
+                    By John Doe
+              %li
+                %img{:alt => "image", :src => "http://www.placehold.it/45x45"}
+                .post-info
+                  %span.title Being a Programmer
+                  %span.discription Lorem ipsum dolor sit...
+                  %em.post-summary
+                    %span> August 31st 2012
+                    By John Doe
+            %ul.pagination
+              %li.previous
+                %a{:href => '#', :title => "previous"} previous
+              %li.next
+                %a{:href => '#', :title => "next"} next
+          #recent-posts
+            %h2
+              %span Recents Post:
+            %ul
+              %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              %li Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              %li Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+              %li Laboris nisi ut aliquip ex ea commodo consequat.
+              %li Duis aute irure dolor in reprehenderit in voluptate velit.
+              %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          #connect
+            %h2
+              %span Subscribe:
+            %form
+              %fieldset
+                %input{:placeholder => "Name:", :type => "text"}
+                %input{:placeholder => "Email:", :type => "text"}
+                %input{:type => "submit", :value => "Submit"}
+      .details.container
+        %p &copy; 2012 Computational Arts Corp.
+        %a{:href => '#'} All Rights Reserved
+
+    
     = render 'analytics'

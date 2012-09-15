@@ -2,6 +2,8 @@
 
 class WelcomeController < ApplicationController
   
+  
+  
   def home
     ;
   end
@@ -25,5 +27,6 @@ class WelcomeController < ApplicationController
   def team
     ;
   end
+  
   
 end

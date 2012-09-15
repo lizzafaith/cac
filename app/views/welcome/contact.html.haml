@@ -1,4 +1,19 @@
 
-
-.contact
-  = render 'simplest_nav'
+#content
+  .container
+    %h2 Contact
+    = image_tag 'map.png'
+    %div
+      %ul
+        %li.address Street No., City, Country Postal Code
+        %li.phone +65XX XXXX XXXX
+        %li.email info@cac.com
+      %form
+        %fieldset
+          %legend Send your email
+          %input{:placeholder => "Name", :type => "text"}
+          %input{:placeholder => "Email", :type => "text"}
+          %input{:placeholder => "Subject", :type => "text"}
+          %textarea
+            :preserve
+          %input{:type => "submit", :value => "Send"}
