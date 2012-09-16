@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.\
  *
  *
- *= require ./reset-min.css
+ *= require ./reset-min
  *= require_self
  *= require_tree ./red_lights
  *
