@@ -15,6 +15,7 @@ Cac2::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
+  # usually I want this set to true because I do not compile myself.
   config.assets.compile = true
 
   # Generate digests for assets URLs
