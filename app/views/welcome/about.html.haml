@@ -1,11 +1,18 @@
 
 #content
   .container
-    %h2 About
+    %h2= t('g.about')
   .container.overview
-    %h3 Welcome to Computational Arts Corp., a web development shop specializing in full-track Ruby on Rails application.
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    %img{:alt => "CAC Team", :src => "http://www.placehold.it/430x210"}
+
+    
+
+    %h3 Welcome to Computational Arts Corp.
+
+    = image_tag 'cac.jpg' # %img{:alt => "CAC Team", :src => "http://www.placehold.it/430x210"}
+
+    %p Born in Chicago IL, we are no stranger to midwestern hospitality. Currently operating from San Francisco CA, we are no stranger to modern web development technology. Together, these qualities make us an exceptional company to do business with.
+    %p We love helping small and medium-sized businesses achieve their goals. We automate processes. We are good at what we do.
+    
   .container.our-process
     %h3 Our Process
     %ul
@@ -34,4 +41,5 @@
       %li Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       %li Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       %li Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    %a.button{:href => '#'} Contact us
+    .center
+      = link_to t('g.contact_us'), contact_path, :class => :button

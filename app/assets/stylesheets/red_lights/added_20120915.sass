@@ -3,14 +3,68 @@
 .clear
   clear: both
 
+.center
+  text-align: center
+
+.height-10
+  height: 10px
+.height-20
+  height: 20px
+.height-50
+  height: 50px
+
 #content > .container
   padding-top: .5em
 
   > h2
     margin-bottom: 1.5em
 
-#connect fieldset input
+#connect fieldset input,
+#welcome_contact form input[type="text"]
   padding-left: .5em
 
 #footer
-  margin-top: 5em
+  margin-top: 10px
+  clear: both
+
+
+
+#welcome_about
+  .overview
+    img
+      border: 1px solid #cecece
+      margin-top: 0
+
+  h3
+    float: none
+
+  .choose-us .button
+    float: none
+    width: 10em
+
+img.contact
+  border: 0
+
+#welcome_contact
+  .map,
+  .contact-methods
+
+  .map
+    position: absolute
+
+  .contact-methods
+    margin-left: 340px
+    
+
+  .container
+    h3, 
+    form
+      margin-top: 2em
+
+    input[type="submit"]
+      margin-top: 1em
+      margin-left: 5px
+
+    textarea
+      height: 300px
+      width: 500px

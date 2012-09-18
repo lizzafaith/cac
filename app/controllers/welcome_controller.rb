@@ -5,7 +5,8 @@ class WelcomeController < ApplicationController
   
   
   def home
-    ;
+    @show_top_ad = false
+    
   end
   
   def about

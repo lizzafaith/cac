@@ -5,32 +5,30 @@
     .container
       %h2
         Computational Arts Corp.
-        %span is a software consulting company
+        %span is a software engineering & consulting company
   #company_preview
     .container
       %div
-        %h2 Computational Arts Company is a software consulting company.
-        %em We are a web development shop specializing in full-stack ruby on rails application.
-      %a.button{:href => '#'} Contact us
+        %h2 Computational Arts Corp. is a software engineer & consulting company.
+        %em We are a web development shop specializing in full-stack ruby on rails development.
+      = link_to t('g.contact_us'), contact_path, :class => :button
   .container
     %ul.workflow
       %li.semantic
-        %a{:href => '#'}
-          %strong Semantic
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        = link_to raw('<strong>Semantic</strong>'), technology_path, :class => :image
+        %p
+          Our implementation code is semantic. Why does it matter? The technological solution we provide for your needs does not depend on current 
+          technology, but stays current with the times. The semantic web releases you from the dependency on any particular technology.
       %li.w3c-valid
-        %a{:href => '#'}
-          %strong W3C Valid
-        %p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        = link_to raw('<strong>W3C Valid</strong>'), technology_path, :class => :image
+        %p
+          Our code and markup adheres to the latest open web standards. Our process adheres to top modern development practices.
       %li.optimized-speed
-        %a{:href => '#'}
-          %strong Optimized Speed
-        %p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        = link_to raw('<strong>Optimized</strong>'), technology_path, :class => :image
+        %p We optimize for speed and performance. We maximize your return on investment.
       %li.cross-browser
-        %a{:href => '#'}
-          %strong Cross Browser
-        %p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        = link_to raw('<strong>Cross Platform</strong>'), technology_path, :class => :image
+        %p Our code works on all major platforms: Desktop, mobile, iOS, Android, as well as across major browsers.
       %li.responsive
-        %a{:href => '#'}
-          %strong Responsive
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        = link_to raw('<strong>Mobile</strong>'), technology_path, :class => :image
+        %p We develop using modern technologies such as responsive design, media queries, HTML5, and mobile jQuery.

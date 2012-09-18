@@ -1,19 +1,48 @@
 
 #content
+
   .container
-    %h2 Contact
-    = image_tag 'map.png'
-    %div
+
+    %h2= t('g.contact_us')
+
+    .map
+
+      -# = image_tag 'map.png'
+      = image_tag 'sfbay.jpg'
+
+      %h3 By Mail
+
       %ul
-        %li.address Street No., City, Country Postal Code
-        %li.phone +65XX XXXX XXXX
-        %li.email info@cac.com
-      %form
-        %fieldset
-          %legend Send your email
-          %input{:placeholder => "Name", :type => "text"}
-          %input{:placeholder => "Email", :type => "text"}
-          %input{:placeholder => "Subject", :type => "text"}
-          %textarea
-            :preserve
-          %input{:type => "submit", :value => "Send"}
+        %li.address P. O. Box 193023
+        %li.address San Francisco, CA 94119
+        -# %li.phone +65XX XXXX XXXX
+
+    .contact-methods
+
+      %p Contact us to discuss your project requirements and to get a quote.
+      %p 
+        We are best reached by email. You may use the form below to send us a message directly to 
+        = image_contact
+
+      %h3 By Phone
+
+      %ul
+        %li +1 415 948 0368
+
+      -# %h3 By Email
+
+      %div
+      
+        %form
+          %fieldset
+            -# %legend Send your email
+            %input{:placeholder => "Name", :type => "text"}
+            %input{:placeholder => "Email", :type => "text"}
+            %input{:placeholder => "Subject", :type => "text"}
+            %textarea
+              :preserve
+            %input{:type => "submit", :value => t('g.send_email')}
+
+      
+
+      

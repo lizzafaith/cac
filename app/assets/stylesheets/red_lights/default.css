@@ -131,23 +131,23 @@
 
 		.workflow li { float: left; width: 16%; padding-right: 5% }
 		.workflow .responsive { padding-right: 0 }
-		.workflow a { 
+		.workflow a.image { 
 			display: block;
 			height: 122px;
 			margin: 31px 10px;
 			position: relative;
 			text-align: center;
 			width: 130px;}
-		.semantic a { background: url(/assets/sprite.png) no-repeat 3px 1px transparent; }
-		.w3c-valid a { background: url(/assets/sprite.png) no-repeat 3px -120px transparent }
-		.optimized-speed a { background: url(/assets/sprite.png) no-repeat 3px -242px transparent }
-		.cross-browser a { background: url(/assets/sprite.png) no-repeat 3px -363px transparent }
-		.responsive a { background: url(/assets/sprite.png) no-repeat 3px -485px transparent }
-		.semantic a:hover { background: url(/assets/sprite.png) no-repeat -130px -2px transparent; }
-		.w3c-valid a:hover { background: url(/assets/sprite.png) no-repeat -131px -130px transparent }
-		.optimized-speed a:hover { background: url(/assets/sprite.png) no-repeat -131px -260px transparent }
-		.cross-browser a:hover { background: url(/assets/sprite.png) no-repeat -131px -390px transparent }
-		.responsive a:hover { background: url(/assets/sprite.png) no-repeat -132px -521px transparent }
+		.semantic a.image { background: url(/assets/sprite.png) no-repeat 3px 1px transparent; }
+		.w3c-valid a.image { background: url(/assets/sprite.png) no-repeat 3px -120px transparent }
+		.optimized-speed a.image { background: url(/assets/sprite.png) no-repeat 3px -242px transparent }
+		.cross-browser a.image { background: url(/assets/sprite.png) no-repeat 3px -363px transparent }
+		.responsive a.image { background: url(/assets/sprite.png) no-repeat 3px -485px transparent }
+		.semantic a.image:hover { background: url(/assets/sprite.png) no-repeat -130px -2px transparent; }
+		.w3c-valid a.image:hover { background: url(/assets/sprite.png) no-repeat -131px -130px transparent }
+		.optimized-speed a.image:hover { background: url(/assets/sprite.png) no-repeat -131px -260px transparent }
+		.cross-browser a.image:hover { background: url(/assets/sprite.png) no-repeat -131px -390px transparent }
+		.responsive a.image:hover { background: url(/assets/sprite.png) no-repeat -132px -521px transparent }
 		.workflow strong { 
 			background-color: #fff;
 			color: #434242;
@@ -158,9 +158,9 @@
 			top: 145px; }
 		.semantic strong { left: 30px }
 		.w3c-valid strong{ left: 30px }
-		.optimized-speed strong { left: 5px }
+		.optimized-speed strong { left: 30px }
 		.cross-browser strong { left: 12px}
-		.responsive strong { left: 20px }
+		.responsive strong { left: 40px }
 		.workflow p { border-top: 1px solid #e7e6e6; padding: 20px 0; text-align: justify }
 			
 		/* ABOUT */

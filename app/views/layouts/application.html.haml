@@ -2,7 +2,7 @@
 !!!
 %html
   %head
-    %title Computational Arts Corporation
+    %title Computational Arts Corp.
     = stylesheet_link_tag 'application'
     = csrf_meta_tags
 
@@ -24,9 +24,21 @@
           %li.contact.last
             = link_to t('g.contact'), contact_path
 
+      - if @show_top_ad
+        .clear
+        .height-10
+        .center
+          = render 'ad_leaderboard'
+        .height-20
+
     = yield
     
+
     .clear
+      .height-50
+      .center
+        = render 'ad_leaderboard'
+
     #footer
       #stay-connected
         .container
@@ -67,7 +79,7 @@
                 %a{:href => '#', :title => "next"} next
           #recent-posts
             %h2
-              %span Recents Post:
+              %span Company News:
             %ul
               %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               %li Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -77,15 +89,15 @@
               %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           #connect
             %h2
-              %span Subscribe:
+              %span Receive our eNewsletter:
             %form
               %fieldset
-                %input{:placeholder => "Name:", :type => "text"}
-                %input{:placeholder => "Email:", :type => "text"}
-                %input{:type => "submit", :value => "Submit"}
+                %input{:placeholder => "Name", :type => "text"}
+                %input{:placeholder => "Email", :type => "text"}
+                %input{:type => "submit", :value => t('g.subscribe') }
       .details.container
         %p &copy; 2012 Computational Arts Corp.
-        %a{:href => '#'} All Rights Reserved
+        = link_to t('g.copyright'), privacy_path
 
     
     = render 'analytics'

@@ -2,4 +2,10 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  
+  g:
+    contact_us: Contact Us
+    copyright: All Rights Reserved
+    subscribe: Subscribe
+    about: About
+    send_email: Send Email
