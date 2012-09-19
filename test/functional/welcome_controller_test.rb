@@ -25,4 +25,10 @@ class WelcomeControllerTest < ActionController::TestCase
     assert_template :home
   end
   
+  test 'get ruby on rails hosting' do
+    get :hosting
+    assert_response :success
+    assert_template :hosting
+  end
+  
 end
